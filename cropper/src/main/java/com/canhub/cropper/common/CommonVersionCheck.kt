@@ -9,4 +9,5 @@ object CommonVersionCheck {
     fun isAtLeastM23() = SDK_INT >= Build.VERSION_CODES.M
     fun isAtLeastO26() = SDK_INT >= Build.VERSION_CODES.O
     fun isAtLeastQ29() = SDK_INT >= Build.VERSION_CODES.Q
+    fun isAtLeastP28() = SDK_INT >= Build.VERSION_CODES.P
 }

@@ -714,7 +714,8 @@ class CropOverlayView
                     if (CommonVersionCheck.isAtLeastO26()) canvas.clipOutPath(mPath)
                     else canvas.clipPath(mPath, Region.Op.INTERSECT)
 
-                    canvas.clipRect(rect, Region.Op.XOR)
+                    if (CommonVersionCheck.isAtLeastP28()) canvas.clipOutRect(rect)
+                    else canvas.clipRect(rect, Region.Op.XOR)
                     canvas.drawRect(left, top, right, bottom, mBackgroundPaint!!)
                     canvas.restore()
                 }
